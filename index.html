@@ -322,11 +322,7 @@
           <img src="assets/poseidonfondelloimg.png" alt="Fondello inciso" />
           <div class="gallery-overlay">
             <span>Fondello</span>
-          </div>
-        </div>
-        <div class="gallery-item gallery-item-wide">
-          <img src="assets/poseidondiagonalimg.png" alt="POSEIDON — Vista diagonale" />
-          <div class="gallery-overlay">
+            <div class="gallery-overlay">
             <span>Manifattura</span>
           </div>
         </div>
@@ -346,7 +342,7 @@
         <h2 class="section-title light-title">Guarda CHRONO GODS<br />Prendere Vita</h2>
         <p class="video-subtitle">Un viaggio nell'epicità. Acciaio, mito e precisione in un'unica visione.</p>
         <div class="video-player" id="video-player">
-          <div class="video-thumbnail">
+          <div class="video-thumbnail" id="video-thumbnail">
             <img src="assets/poseidonimg3.png" alt="CHRONO GODS Brand Film" class="video-thumb-img" />
             <div class="video-thumb-overlay"></div>
             <button class="play-btn" id="play-btn" aria-label="Riproduci video">
@@ -357,16 +353,21 @@
                 </svg>
               </div>
             </button>
-            <div class="video-duration">2:47</div>
+            <div class="video-duration">Animazione 3D</div>
           </div>
           <div class="video-modal" id="video-modal">
             <div class="video-modal-content">
               <button class="video-close" id="video-close" aria-label="Chiudi">✕</button>
-              <div class="video-placeholder">
-                <div class="video-ph-icon">▶</div>
-                <p>Il video del brand sarà disponibile al lancio.</p>
-                <span>CHRONO GODS · Brand Film 2026</span>
-              </div>
+              <video
+                id="brand-video"
+                class="brand-video-player"
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/poseidonimg3.png">
+                <source src="assets/videoanimazioen3d.mp4" type="video/mp4" />
+                Il tuo browser non supporta la riproduzione video.
+              </video>
             </div>
           </div>
         </div>

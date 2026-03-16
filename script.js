@@ -152,10 +152,14 @@
   const playBtn    = document.getElementById('play-btn');
   const videoModal = document.getElementById('video-modal');
   const closeBtn   = document.getElementById('video-close');
+  const brandVideo = document.getElementById('brand-video');
 
   playBtn && playBtn.addEventListener('click', () => {
     videoModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    if (brandVideo) {
+      brandVideo.play().catch(() => {});
+    }
   });
   closeBtn && closeBtn.addEventListener('click', closeModal);
   videoModal && videoModal.addEventListener('click', e => {
@@ -167,6 +171,10 @@
   function closeModal() {
     videoModal && videoModal.classList.remove('active');
     document.body.style.overflow = '';
+    if (brandVideo) {
+      brandVideo.pause();
+      brandVideo.currentTime = 0;
+    }
   }
 
   /* ---- Registration form ---- */
